@@ -55,7 +55,7 @@
 #### Honestly this tree was very big I couldn't fit it within the frame :sweat: ! but you can have a look at the full tree in the below PDF file :blush: :
 - titanic_before_pruning.pdf
 ![titanic_before_pruning.png](titanic_before_pruning.png)
-### But I did some pruning and optimization which produced more precise tree having more accuracy :smiley::
+### But I did some pruning and optimization which produced more precise tree having improved accuracy :smiley::
 - titanic_after_pruning.pdf
 ![titanic_after_pruning.png](titanic_after_pruning.png)
 
