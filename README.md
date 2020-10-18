@@ -59,6 +59,10 @@
 - titanic_after_pruning.pdf
 ![titanic_after_pruning.png](titanic_after_pruning.png)
 
+### Alright! So that's all the theories and logic that I have implemented in my code.
+- Please have a look at the Decision_Tree.ipynb for all the codings
+- Every function and operation has comment lines included with em. Hope you will be able to understand it.
+- But you can always contact me if you have any difficulties understanding the code. I'll be really happy to help you! :blush: 
 
 ##  References
 - Analytical Information Systems course by **Prof. Dr. Gefei Zhang** at **Hochschule Hof**
