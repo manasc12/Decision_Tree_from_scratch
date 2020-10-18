@@ -19,17 +19,38 @@
   - Another interpretation:
     - Entropy is the amount of information that is contained
     - All examples of the same class -> no information
-    - s is a set of examples
+    - s is a set of examples in any branch
     - p<sub>(+)</sub> is the propertion of examples in class '+'
     - p<sub>(-)</sub> is the propertion of examples in class '-'
     - p<sub>(-)</sub>=1-p<sub>(+)</sub> 
-    - **Entropy** E(s) = -p<sub>(+)</sub>log<sub>2</sub> p<sub>(+)</sub> - p<sub>(-)</sub>log<sub>2</sub> p<sub>(-)</sub> 
+    - **Entropy** E(s) = -p<sub>(+)</sub>log<sub>2</sub> p<sub>(+)</sub> -p<sub>(-)</sub>log<sub>2</sub> p<sub>(-)</sub> 
     - Interpretation :
       - Amount of unorderedness in the class distribution of s
       ![Entropy_Calculation_plus_minus.png](Entropy_Calculation_plus_minus.png)
       - Entropy can be easily generated for classes n>2 
         - p<sub>(i)</sub> is the proportion of the examples in s that belongs to i-th class
-        - E(s) = -p<sub>(1)</sub>log<sub>2</sub> p<sub>(1)</sub> - p<sub>(2)</sub>log<sub>2</sub> p<sub>(2)</sub> ... - p<sub>(n)</sub>log<sub>2</sub> p<sub>(n)</sub> = 	\sum
+        - E(s) = -p<sub>(1)</sub>log<sub>2</sub> p<sub>(1)</sub> -p<sub>(2)</sub>log<sub>2</sub> p<sub>(2)</sub> ... -p<sub>(n)</sub>log<sub>2</sub> p<sub>(n)</sub> = -&sum;<sub>i=1</sub><sup>n</sup> p<sub>(i)</sub>log<sub>2</sub> p<sub>(i)</sub>
+    - **Entropy** is the only function that satisfies the following 3 properties:
+      - When node is pure, measure should be 0
+      - When impurity is maximal (i.e. all classes are equally likely), measure should be maximal
+      - Measure should obey multistage property
+### For more branches of a node we compute Average entropy for the node:
+- Compute the weighted average over all sets resulting from the split:
+- I(s,A)= &sum;<sub>i</sub>(|s<sub>i</sub>|/|s|) * E(s<sub>i</sub>)
+### We calculate Gain of attributes:
+- Gain(s,A)= Parent_Branch_Entropy- Child_Node_Average_Entropy
+### When we have a highly branching attribute like (Name or ID or some types of primary-key):
+- We might face the below issues
+  - Information gain might be baised towards choosing attributes with a large number of values and which can cause issues like overfitting and fragmentation.
+- Inorder to deal with this issue we calculate the **intrinsic information** of attributes:
+  - IntI(s,A)= -&sum;<sub>i</sub>(|s<sub>i</sub>|/|s|) log (|s<sub>i</sub>|/|s|) 
+- Then we calculate **Gain Ratio** of attributes:
+  - GR(s,A)= Gain(s,A)/IntI(s,A)
+### Then we select the attribute having high Gain Ratio
+### If we have continuous attributes then we can follow below steps for calculating its information gain
+- All we have talked about above is for categorical attributes but what to do when we have some continuous attributes
+![continuous_attribute_steps.png](continuous_attribute_steps.png)
+- Then we can calculate the Gain Ratio for the continuous attribute and compare it with the rest of the attributes to decide which one should be eligible for creating a node with.
 ##  References
 - Analytical Information Systems course by **Prof. Dr. Gefei Zhang** at **Hochschule Hof**
     - [Link to Profile: **Prof. Dr. Gefei Zhang**](https://people.f4.htw-berlin.de/~zhangg/)
