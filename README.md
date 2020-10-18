@@ -53,8 +53,13 @@
 - Then we can calculate the Gain Ratio for the continuous attribute and compare it with the rest of the attributes to decide which one should be eligible for creating a node with.
 ### After Executing with the above Rule and Titanic data, I got the tree something like this:
 #### Honestly this tree was very big I couldn't fit it within the frame :sweat: ! but you can have a look at the full tree in the below PDF file :blush: :
-- 
+- titanic_before_pruning.pdf
 ![titanic_before_pruning.png](titanic_before_pruning.png)
+### But I did some pruning and optimization which produced more precise tree having more accuracy :smiley::
+- titanic_after_pruning.pdf
+![titanic_after_pruning.png](titanic_after_pruning.png)
+
+
 ##  References
 - Analytical Information Systems course by **Prof. Dr. Gefei Zhang** at **Hochschule Hof**
     - [Link to Profile: **Prof. Dr. Gefei Zhang**](https://people.f4.htw-berlin.de/~zhangg/)
