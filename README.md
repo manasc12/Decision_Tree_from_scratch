@@ -2,7 +2,7 @@
 - Building Decision Tree algorithm without using any pre-existing machine learning library to predict survival of Titanic passengers.
   - Here I have used **Entropy Value** of each attribute to create our decision tree.
   - The dataset used here is from **Kaggle**: [Titanic Passenger Datset Link](https://www.kaggle.com/c/titanic)
-  - I have not used any Machine Learning Libraries here, such as Scikit-Learn etc. 
+  - I have not used any Machine Learning Libraries here, such as Scikit-Learn, MLlib etc. 
 ## Methods that I have used to create decision tree
 ### Top-Down Induction of Decision Trees:
 - Learn Trees in a Top-Down Fashion
