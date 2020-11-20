@@ -1,7 +1,8 @@
 # Decision_Tree_from_scratch
-- Building Decision Tree algorithm without using any pre-existing machine learning library to predict survival of Titanic passengers.
+- Building Decision Tree algorithm without using any pre-existing machine learning library.
   - Here I have used **Entropy Value** of each attribute to create our decision tree.
-  - The dataset used here is from **Kaggle**: [Titanic Passenger Datset Link](https://www.kaggle.com/c/titanic)
+  - I have to use a basic dataset from Kaggle just to demonstrate that my decision tree can work on both Categorical data as well as Numerical continuos data.
+  - The Dataset used here is from **Kaggle**: [Titanic Passenger Datset Link](https://www.kaggle.com/c/titanic)
   - I have not used any Machine Learning Libraries here, such as Scikit-Learn, MLlib etc. 
 ## Methods that I have used to create decision tree
 ### Top-Down Induction of Decision Trees:
